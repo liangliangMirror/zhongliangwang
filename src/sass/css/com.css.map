@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,MAAK;EACD,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,SAAS,EAAE,IAAI",
+"sources": ["../sass/com.scss"],
+"names": [],
+"file": "com.css"
+}
