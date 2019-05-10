@@ -80,6 +80,10 @@ body {
   color: #fff;
 }
 
+#homePage {
+  position: relative;
+  overflow: hidden;
+}
 #homePage .add_t_wrap {
   overflow-x: hidden;
 }
@@ -463,6 +467,26 @@ body {
   width: 160px;
   height: 80px;
 }
+#homePage .xd {
+  position: fixed;
+  top: 0;
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 0px;
+  background: url(../../img/hbg.png) repeat-x bottom;
+}
+#homePage .xd .app2 {
+  margin-top: 18px;
+  width: 174px;
+  line-height: 23px;
+  font-size: 16px;
+  color: #c30000;
+  font-weight: bold;
+}
+#homePage .xd .app2 span {
+  font-size: 14px;
+}
 #homePage .main_nav_wrap {
   position: relative;
   height: 46px;
@@ -472,7 +496,7 @@ body {
   position: absolute;
   top: 2px;
   left: 0;
-  z-index: 10;
+  z-index: 2;
 }
 #homePage .main_nav_wrap .all_kinds .head {
   width: 210px;

@@ -177,4 +177,13 @@ $(function () {
         var $val = $(this).index();
         $(this).parent().next().children().eq($val).addClass('r_list').siblings().removeClass('r_list');
     })
+    /*---------------------------------吸顶菜单 */
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() >= 700) {
+            $('.xd').stop().animate({ 'height': 80, 'padding-bottom': 12 }, 100);
+        } else {
+            $('.xd').stop().animate({ 'height': 0, 'padding-bottom': 0 }, 30);
+        }
+    })
+    /*---------------------------------吸顶菜单 */
 })
