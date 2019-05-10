@@ -10,8 +10,18 @@ $(function () {
                     data: { 'uids': $val, 'phone': $val, 'pas': $val1 },
                     success: function (str) {
                         if (str == '1') {
-                            setCookie('uid', $val, 7);
-                            $(location).attr('href', '../indexaaa.html');
+                            $.ajax({
+                                type: 'get',
+                                url: '../api/enter_uid.php',
+                                data: { 'name': $val },
+                                dataType: 'json',
+                                success: function (str) {
+                                    console.log(str[0].uid);
+                                    setCookie('uid', str[0].uid, 7);
+                                    $(location).attr('href', '../indexaaa.html');
+                                }
+                            })
+
                         } else {
                             $('.form_div_none').html('用户名或密码不正确');
                             $('.form_div_none').show();

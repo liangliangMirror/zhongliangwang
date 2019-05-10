@@ -5,9 +5,9 @@ if($phone && $code)
 {
     $url = "http://v.juhe.cn/sms/send";
     $params = array(
-        'key'   => 'fac730b446dab634fcd83caca3de0021', //您申请的APPKEY
+        'key'   => '000e653c4e4ea8d3838c97a1ec5007e8', //您申请的APPKEY
         'mobile'    => $phone, //接受短信的用户手机号码
-        'tpl_id'    => '156883', //您申请的短信模板ID，根据实际情况修改
+        'tpl_id'    => '156893', //您申请的短信模板ID，根据实际情况修改
         'tpl_value' =>'#code#='.$code //您设置的模板变量，根据实际情况修改
     );
     $paramstring = http_build_query($params);

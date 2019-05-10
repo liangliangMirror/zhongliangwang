@@ -7,6 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./sass/css/indexaaa.css">
     <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./lib/font_tb0zqkfwmp/iconfont.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./lib/swiper.min.css">
+    <script src="./lib/jquery-1.10.1.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
     <title>主页</title>
 </head>
 
@@ -23,26 +29,437 @@
                     <li>
                         <p>
                             <span>当前城市：</span>
-                            <a href="###" class="site_like"><span>
+                            <a href="###" class="site_like "><span class="">
                                     广州
+                                    <i class="arrow_down png"></i>
                                 </span>
-                                <i class="arrow_down png"></i>
+
                             </a>
                         </p>
-                        <div class="site_cont">
-                            <p>您当前所选城市为：<span>广州</span></p>
-                            <div class="hot-city">
+                        <div class="site_cont clearFix">
+                            <p>您当前所选城市为：<span class="city">广州</span></p>
+                            <div class="hot-city clearFix">
+                                <div class="clearFix hot-city_one">
+                                    <div class="hot-citys">热门城市:</div>
+                                    <div class="hot-city-name clearFix">
+                                        <span>北京</span>
+                                        <span>上海</span>
+                                        <span>广州</span>
+                                        <span>武汉</span>
+                                        <span>沈阳</span>
+                                        <span>郑州</span>
+                                        <span>南京</span>
+                                        <span>成都</span>
+                                        <span>福州</span>
+                                        <span>天津</span>
+                                        <span>深圳</span>
+                                        <span>杭州</span>
+                                        <span>苏州</span>
+                                        <span>无锡</span>
+                                        <span>青岛</span>
+                                    </div>
+                                </div>
 
+                                <div class="site-input">
+                                    <b class="province cur">
+                                        <em>请选择省份</em>
+                                        <s></s>
+                                    </b>
+                                    <b class="site-input-city provincetwo">
+                                        <em>请选择城市</em>
+                                        <s></s>
+                                    </b>
+                                </div>
+                                <div class="abridge-city city_one">
+                                    <div class="abridge fl">
+                                        A-G
+                                    </div>
+                                    <div class="city-name">
+                                        <span>安徽</span>
+                                        <span>北京</span>
+                                        <span>重庆</span>
+                                        <span>福建</span>
+                                        <span>广西</span>
+                                        <span>贵州</span>
+                                        <span>广东</span>
+                                        <span>甘肃</span>
+                                    </div>
+                                    <div class="abridge fl">
+                                        H-K
+                                    </div>
+                                    <div class="city-name">
+                                        <span>安徽</span>
+                                        <span>北京</span>
+                                        <span>重庆</span>
+                                        <span>福建</span>
+                                        <span>广西</span>
+                                        <span>贵州</span>
+                                        <span>广东</span>
+                                        <span>甘肃</span>
+                                        <span>甘肃</span>
+                                    </div>
+                                    <div class="abridge fl">
+                                        L-S
+                                    </div>
+                                    <div class="city-name">
+                                        <span>安徽</span>
+                                        <span>北京</span>
+                                        <span>重庆</span>
+                                        <span>福建</span>
+                                        <span>广西</span>
+                                        <span>贵州</span>
+                                        <span>广东</span>
+                                        <span>甘肃</span>
+                                        <span>甘肃</span>
+                                    </div>
+                                    <div class="abridge fl">
+                                        T-Z
+                                    </div>
+                                    <div class="city-name">
+                                        <span>安徽</span>
+                                        <span>北京</span>
+                                        <span>重庆</span>
+                                        <span>福建</span>
+                                        <span>广西</span>
+                                    </div>
+                                </div>
+                                <div class="abridge-city city_two abridge-subcity">
+                                    <div class="abridge fl">
+                                        A-G
+                                    </div>
+                                    <div class="city-name">
+                                        <span>安徽</span>
+                                        <span>北京</span>
+                                        <span>重庆</span>
+                                        <span>福建</span>
+                                        <!-- <span>广西</span> -->
+                                    </div>
+                                    <div class="abridge fl">
+                                        H-K
+                                    </div>
+                                    <div class="city-name">
+                                        <span>安徽</span>
+                                        <span>北京</span>
+                                        <span>重庆</span>
+                                        <span>福建</span>
+                                        <!-- <span>广西</span> -->
+                                    </div>
+                                    <div class="abridge fl">
+                                        L-S
+                                    </div>
+                                    <div class="city-name">
+                                        <span>安徽</span>
+                                        <span>北京</span>
+                                        <span>重庆</span>
+                                        <span>福建</span>
+                                        <span>广西</span>
+                                        <span>福建</span>
+                                        <span>广西</span>
+                                    </div>
+                                    <div class="abridge fl">
+                                        T-Z
+                                    </div>
+                                    <div class="city-name">
+                                        <span>安徽</span>
+                                        <span>北京</span>
+                                        <span>重庆</span>
+                                        <span>福建</span>
+                                        <span>广西</span>
+                                        <span>广西</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </li>
+                    <div id="zhezhao"></div>
                 </ul>
-                <ul class="fl"></ul>
-                <ul class="fr"></ul>
+                <ul class="fl clearFix" id="top_login_span">
+                    <!-- <li class="welcome">hi，欢迎来我买网</li>
+                    <li class="t_item"><a href="./html/enter.html">登录</a></li>
+                    <li class="t_item"><a href="./html/register.html">注册</a></li> -->
+                </ul>
+                <ul class="navr fr">
+                    <li class="mycount navr_li_one">
+                        <p class="navr_p_one">
+                            <span class="text">我的账户
+                                <i class="png"></i>
+                            </span>
+                        </p>
+                        <div class="myaccount_cont">
+                            <!-- <p class="login">
+                                <span>您还没有登录！</span>
+                                <a href="./html/enter.html">登录</a>
+                            </p>
+                            <ul class="item">
+                                <li>待付款订单</li>
+                                <li>我的消息</li>
+                                <li>待签收订单</li>
+                                <li>我的订单</li>
+                                <li>支付卡账户</li>
+                                <li>我的积分</li>
+                                <li>优惠券/团购卡</li>
+                                <li>我的收藏</li>
+                                <li>电子礼品卡</li>
+                            </ul> -->
+                        </div>
+                    </li>
+                    <li class="cart">
+                        <a href="./html/cart.html">购物车<b class="smallcart_totalamount">0</b>件</a>
+                    </li>
+                    <li class="line">|</li>
+                    <li class="mycount">
+                        <p>
+                            <span class="text">客户服务
+                                <i class="png"></i>
+                            </span>
+                        </p>
+                        <div class="myaccount_cont myaccount_none">
+                            <ul>
+                                <li>帮助中心</li>
+                                <li>新手上路</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="line">|</li>
+                    <li><a href="###">企业购</a> </li>
+                    <li class="line">|</li>
+                    <li class="backexchange">
+                        <a href="###"><span class="backexchange_one"></span></a><a href="###"><span
+                                class="backexchange_two"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header">
+            <div class="head_width clearFix">
+                <div class="logo fl">
+                    <h1>
+                        <a href="###">
+                            <img src="./img/logo.png" alt="">
+                        </a>
+                    </h1>
+                </div>
+                <div class="logo_adv fl">
+                    <h2>
+                        <a href="###">
+                            <img src="./img/logo_adv.jpg" alt="">
+                        </a>
+                    </h2>
+                </div>
+                <div class="search_wrap fl clearFix">
+                    <div class="search_c">
+                        <div class="search_form fl">
+                            <input type="text" class="search_ipt" placeholder="生鲜吃货周  领券199减80，68减20！">
+                        </div>
+                        <div class="search_btn fr">
+                            <button class="submit">搜索</button>
+                        </div>
+                    </div>
+                    <div class="search_r">
+                        <a href="###">
+                            高级<br>搜索
+                        </a>
+                    </div>
+                    <div class="search_b">
+                        <a href="###">虾</a>
+                        <a href="###">坚果</a>
+                        <a href="###">猪肝</a>
+                        <a href="###">面粉</a>
+                        <a href="###">啤酒</a>
+                        <a href="###">牛奶</a>
+                    </div>
+                </div>
+                <div class="app fr">
+                    <a href="###">
+                        <img src="http://pic1.womai.com/upload/backend/2017/04/25/13/1493098879048.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="main_nav_wrap">
+            <div class="width pr">
+                <div class="all_kinds">
+                    <h2 class="head">全部商品分类</h2>
+                    <ul class="cont">
+                        <li class="kinds">
+                            <h3 class="title"><b></b><a href="###">肉禽水产</a> <a href="###">水果蔬菜</a></h3>
+                            <div class="sub_kinds">
+
+                            </div>
+                        </li>
+                        <li class="kinds">
+                            <h3 class="title"><b></b><a href="###">肉禽水产</a> <a href="###">水果蔬菜</a></h3>
+                            <div class="sub_kinds"></div>
+                        </li>
+                        <li class="kinds">
+                            <h3 class="title"><b></b><a href="###">肉禽水产</a> <a href="###">水果蔬菜</a></h3>
+                            <div class="sub_kinds"></div>
+                        </li>
+                        <li class="kinds">
+                            <h3 class="title"><b></b><a href="###">肉禽水产</a> <a href="###">水果蔬菜</a></h3>
+                            <div class="sub_kinds"></div>
+                        </li>
+                        <li class="kinds">
+                            <h3 class="title"><b></b><a href="###">肉禽水产</a> <a href="###">水果蔬菜</a></h3>
+                            <div class="sub_kinds"></div>
+                        </li>
+                        <li class="kinds">
+                            <h3 class="title"><b></b><a href="###">肉禽水产</a> <a href="###">水果蔬菜</a></h3>
+                            <div class="sub_kinds"></div>
+                        </li>
+                        <li class="kinds">
+                            <h3 class="title"><b></b><a href="###">肉禽水产</a> <a href="###">水果蔬菜</a></h3>
+                            <div class="sub_kinds"></div>
+                        </li>
+                        <li class="kinds">
+                            <h3 class="title"><b></b><a href="###">肉禽水产</a> <a href="###">水果蔬菜</a></h3>
+                            <div class="sub_kinds"></div>
+                        </li>
+                        <li class="kinds">
+                            <h3 class="title"><b></b><a href="###">肉禽水产</a> <a href="###">水果蔬菜</a></h3>
+                            <div class="sub_kinds"></div>
+                        </li>
+                        <li class="kinds">
+                            <h3 class="title"><b></b><a href="###">肉禽水产</a> <a href="###">水果蔬菜</a></h3>
+                            <div class="sub_kinds"></div>
+                        </li>
+                        <li class="kinds">
+                            <h3 class="title"><b></b><a href="###">肉禽水产</a> <a href="###">水果蔬菜</a></h3>
+                            <div class="sub_kinds"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav_v clearFix">
+                    <ul class="nav fl">
+                        <li><a href="###">团购</a></li>
+                        <li><a href="###">每日鲜</a></li>
+                        <li><a href="###">我买酒</a></li>
+                        <li><a href="###">我买严选</a></li>
+                        <li><a href="###">包邮直送</a></li>
+                        <li><a href="###">全球购</a></li>
+                    </ul>
+                </div>
+                <div class="min_cart fr">
+                    <div class="cart_btn">
+                        <span class="cart_img">
+                            <i></i>
+                            <span>0</span>
+                        </span>
+                        <span class="cart_text">
+                            <a href="./html/cart.html">购物车</a>
+                        </span>
+                        <span class="cart_ico"></span>
+                    </div>
+                    <div class="cart_cont">
+                        <div>
+                            <span>
+                                <img src="http://static.womai.com/zhongliang/city/common/images/cart-no.jpg" alt="">
+                            </span>
+                            <p>购物车中还没有商品，赶紧选购吧！<a href="./indexaaa.html">去首页看看</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bannar">
+            <div class="bannar_con">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide ">
+                            <a href="###" class="i1">
+                            </a>
+                        </div>
+                        <div class="swiper-slide ">
+                            <a href="###" class="i2">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="###" class="i3">
+                            </a>
+                        </div>
+                        <div class="swiper-slide ">
+                            <a href="###" class="i4">
+                            </a>
+                        </div>
+                        <div class="swiper-slide ">
+                            <a href="###" class="i5">
+                            </a>
+                        </div>
+                        <div class="swiper-slide ">
+                            <a href="###" class="i6">
+                            </a>
+                        </div>
+                        <div class="swiper-slide ">
+                            <a href="###" class="i7">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev jiantou"></div>
+                    <!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
+                    <div class="swiper-button-next jiantou"></div>
+                    <!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
+                    <div class="swiper-pagination"></div>
+                    <!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
+                </div>
+                <script src="./lib/swiper.min.js"></script>
+                <script>
+                    var mySwiper = new Swiper('.swiper-container', {
+                        //可选选项，自动滑动
+
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        autoplay: {
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        },
+                        loop: true,
+                    })
+
+
+                </script>
             </div>
         </div>
     </div>
-    <div class="zhezhao"></div>
+    <div id="fiex">
+        <div class="wm-toolbar-top">
+            <em></em>
+            购物车
+            <span>0</span>
+        </div>
+        <div class="wm-toolbar-tab">
+            <ul>
+                <li>
+                    <span>我的收藏</span>
+                    <i class="iconfont icon-shoucang"></i>
+                </li>
+                <li>
+                    <span>账户中心</span>
+                    <i class="iconfont icon-sousuoyemiantubiao
+"></i>
+                </li>
+                <li>
+                    <span>在线充值</span>
+                    <i class="iconfont icon-chong"></i>
+                </li>
+                <li>
+
+                    <i class="iconfont icon-ico"></i>
+                </li>
+                <li class="huaban">
+                    <span>顶部</span>
+                    <i class="iconfont icon-icon_huaban
+"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 </body>
 
 </html>

@@ -70,6 +70,10 @@ th {
     font-style: normal;
 }
 
+a {
+    text-decoration: none;
+}
+
 .fB {
     font-weight: bold;
 }
@@ -99,10 +103,7 @@ a:visited {
     text-decoration: none;
 }
 
-a:hover {
-    color: #ba2636;
-    text-decoration: underline;
-}
+
 
 a:active {
     color: #ba2636;
@@ -123,4 +124,12 @@ a:active {
 
 .fr {
     float: right;
+}
+
+input[type="hidden"i] {
+    -webkit-appearance: initial;
+    background-color: initial;
+    cursor: default;
+    padding: initial;
+    border: initial;
 }

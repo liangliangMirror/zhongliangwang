@@ -4,14 +4,32 @@ $(function () {
     $('.cont_phone').on('blur', function () {
         //验证邮箱和电话
         var $val = $(this).val();
-        if (validator.emails($val) || validator.phones($val)) {
-            $('.cont_phone_none').hide();
-            $arr[$(this).parent().index()] = 1;
-        } else {
-            $('.cont_phone_none').show();
-            $('.cont_phone_none').html(' 请您输入正确的邮箱或手机');
-            $arr[$(this).parent().index()] = 0;
-        }
+        $.ajax({
+            type: 'get',
+            url: '../api/enter_uid.php',
+            data: { 'name': $val },
+            success: function (str) {
+                if (str == '1') {
+                    if (validator.emails($val) || validator.phones($val)) {
+                        $('.cont_phone_none').hide();
+                        $arr[$(this).parent().index()] = 1;
+                        console.log(str)
+                        console.log($val)
+                    } else {
+                        console.log(str)
+                        console.log($val)
+                        $('.cont_phone_none').show();
+                        $('.cont_phone_none').html(' 请您输入正确的邮箱或手机');
+                        $arr[$(this).parent().index()] = 0;
+                    }
+                } else {
+                    $('.cont_phone_none').show();
+                    $('.cont_phone_none').html('您用的手机或邮箱太抢手了');
+                    $arr[$(this).parent().index()] = 0;
+                }
+            }
+        })
+
 
     });
     $('.cont_userName').on('blur', function () {
@@ -144,6 +162,7 @@ $(function () {
                 $isok = 'ok'
             }
         })
+
         if ($code == $('.cont_phonePas').val()) {
             if ($(this).hasClass('btn_green')) {
                 if ($isok == 'ok') {
@@ -164,6 +183,9 @@ $(function () {
                     })
                 }
             }
+        } else {
+            $('.main_input').eq(0).find('div').html('短信验证码错误');
+            $('.main_input').eq(0).find('div').show();
         }
 
     });
