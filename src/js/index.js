@@ -103,17 +103,64 @@ $(function () {
     }, function () {
         $(this).children('i').css('background', '').prev().hide();
     })
+    /*           ----------------- */
     $('.huaban').on('click', function () {
         $('html ,body').animate({ scrollTop: 0 }, 300);
         //回到顶部
     })
     /*   ------------------------------ 侧边栏*/
-    // a标签经过时字体变绿
-    $('a').hover(function () {
-        $(this).toggleClass('fncolor_green');
-    }, function () {
-        $(this).toggleClass('fncolor_green');
+
+    /*----------------渲染一级菜单 */
+    $(function () {
+        var $cont_nav = '';
+        var $arr = ['樱桃', '奇异果', '橙子', '苹果', '哈密瓜', '油桃', '梨子', '番薯', '石榴', '草莓', '椰子'];
+        for (var $i = 0; $i < 11; $i++) {
+            var $html = '';
+            for (var $j = 0; $j < 9; $j++) {
+                $html += ` 
+             <h4>精品${$arr[$i]}</h4>
+                                        <ul class="c_kinds_ul">
+                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
+                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
+                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
+                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
+                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
+                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
+                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
+                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
+                                        </ul>`;
+            }
+            $cont_nav += `<li class="kinds">
+                            <h3 class="title"><b></b><a href="./html/list.html">${$arr[$i]}水产</a> <a href="./html/list.html">水果${$arr[$i]}</a></h3>
+                            <div class="sub_kinds">
+                                <div class="kinds-box">
+                                    <div class="c_kinds clearFix">
+                                        ${$html}
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+`;
+            $('.cont').html($cont_nav);
+        }
+        $('.kinds').hover(function () {
+            $(this).toggleClass('bg_fff').children(1).toggleClass('displayblock');
+        }, function () {
+            $(this).toggleClass('bg_fff').children(1).toggleClass('displayblock');
+        })
+
+        $('a').hover(function () {
+            $(this).toggleClass('fncolor_green');
+        }, function () {
+            $(this).toggleClass('fncolor_green');
+        })
     })
+
+    // // --------------------------------二级菜单
+
+    // a标签经过时字体变绿
+
+
     /*-------------------------------nav处购物车 */
     $('.min_cart').hover(function () {
         $(this).children().eq(1).toggleClass('displayblock');
@@ -123,5 +170,11 @@ $(function () {
         $(this).children().eq(1).toggleClass('displayblock');
         $(this).children().eq(0).toggleClass('cur2');
         $(this).find('.cart_ico').toggleClass('cart_ico2');
+    })
+    /* -----------------------------------------cont_w */
+    $('.r_title').on('mouseenter', 'li', function () {
+        $(this).addClass('r_cur').siblings().removeClass('r_cur');
+        var $val = $(this).index();
+        $(this).parent().next().children().eq($val).addClass('r_list').siblings().removeClass('r_list');
     })
 })

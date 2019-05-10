@@ -62,6 +62,7 @@ body {
         top: 176.5px;
         position: absolute;
         left: 0;
+        color: #fff;
         font: 12px/1.2 "Microsoft YaHei";
 
         em {
@@ -589,6 +590,8 @@ body {
                 padding: 12px 0 28px 0;
                 background-color: #3ea600;
 
+
+
                 .kinds {
                     float: left;
                     height: 39px;
@@ -619,6 +622,85 @@ body {
                             font-size: 14px;
                         }
                     }
+
+                    .sub_kinds {
+                        position: absolute;
+                        top: 0px;
+                        left: 209px;
+                        z-index: 30;
+                        display: none;
+                        width: 757px;
+                        height: 419px;
+                        padding: 30px 15px 0 15px;
+                        border-right: 1px solid #3a9900;
+                        border-bottom: 1px solid #3a9900;
+                        background-color: #fff;
+                        overflow-y: auto;
+
+                        .kinds-box {
+                            position: relative;
+                            width: 757px;
+                            height: 419px;
+                            overflow: hidden;
+
+                            .c_kinds {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+
+                                h4 {
+                                    position: relative;
+                                    float: left;
+                                    width: 86px;
+                                    height: 22px;
+                                    font-size: 13px;
+                                    line-height: 22px;
+                                    font-weight: bold;
+                                    color: #333;
+                                    padding: 6px 20px 6px 0;
+                                    text-align: right;
+                                }
+
+                                .c_kinds_ul {
+                                    float: left;
+                                    width: 580px;
+                                    line-height: 30px;
+                                    overflow: hidden;
+                                    zoom: 1;
+                                    padding-top: 6px;
+                                    padding-bottom: 9px;
+                                    margin-bottom: 3px;
+                                    border-bottom: 1px solid #eaeaea;
+
+                                    li {
+                                        float: left;
+                                        /* width: 100px; */
+                                        height: 16px;
+                                        margin: 5px 0;
+                                        line-height: 16px;
+                                        padding: 0 8px;
+                                        border-left: 1px solid #dedede;
+
+                                        a {
+                                            color: #757575;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .bg_fff {
+                    background: #fff;
+
+                    h3 {
+                        a {
+                            color: #3a9900 !important;
+                        }
+                    }
+
+
                 }
             }
         }
@@ -818,6 +900,101 @@ body {
                         background: #3a9900;
                     }
                 }
+            }
+        }
+    }
+
+    .cont_w {
+        position: relative;
+
+        .cont_r {
+            position: absolute;
+            top: -455px;
+            right: 5px;
+            width: 200px;
+            height: 450px;
+            margin-top: 5px;
+            background: #fff;
+
+            .r_title {
+                position: absolute;
+                width: 202px;
+                overflow: hidden;
+
+                .r_cur {
+                    width: 67px;
+                    padding: 0;
+                    color: #0D8700;
+                    border-bottom: 2px solid #2d8800;
+                    background-color: #fff;
+                }
+
+                li {
+                    float: left;
+                    width: 65px;
+                    height: 29px;
+                    padding: 0 1px;
+                    line-height: 29px;
+                    color: #3c3c3c;
+                    text-align: center;
+                    border-bottom: 2px solid #fff;
+                    background-color: #F7F7F7;
+                    cursor: pointer;
+                }
+            }
+
+            .r_warp {
+                padding: 35px 16px 6px;
+                height: 75px;
+
+                >li {
+                    display: none;
+                    padding: 7px 0;
+                    overflow: hidden;
+                    zoom: 1;
+
+                    ul>li {
+                        padding-left: 3px;
+                        height: 21px;
+                        line-height: 21px;
+                        overflow: hidden;
+                    }
+                }
+
+                .r_list {
+                    display: list-item;
+                }
+            }
+
+            .lead_btn_wrap {
+                width: 201px;
+                border-top: 1px solid #ddd;
+                overflow: hidden;
+
+                li {
+                    float: left;
+                    width: 66px;
+                    height: 60px;
+                    border-bottom: 1px dotted #ddd;
+                    border-right: 1px dotted #ddd;
+                    overflow: hidden;
+                    text-align: center;
+
+                    @for $i from 1 through 9 {
+                        .i#{$i} {
+                            background: url(../../img/lead_btn_wrap#{$i}) center top no-repeat;
+                            display: block;
+                            width: 67px;
+                            height: 61px;
+                        }
+                    }
+                }
+            }
+
+            .add_b {
+                width: 200px;
+                height: 148px;
+                margin: 0;
             }
         }
     }
