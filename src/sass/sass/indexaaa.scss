@@ -1,10 +1,12 @@
 html,
 body {
     color: #606060;
-    font: 12px/150% Arial, Tahoma, "宋体";
+    font: 12px/150% Arial, Tahoma, "微软雅黑";
     width: 100%;
-    height: 3000px;
+    height: 100%;
 }
+
+$font12:12px;
 
 #fiex {
     height: 100%;
@@ -90,25 +92,39 @@ body {
     position: relative;
     overflow: hidden;
 
+    //头部动画
     .add_t_wrap {
-        overflow-x: hidden;
+        overflow: hidden;
 
         a {
             display: block;
             width: 100%;
-            height: 100%;
+            // height: 100%;
             margin: 0 auto;
             text-align: left;
 
             img {
                 position: relative;
                 display: block;
-                left: 50%;
-                margin-left: -950px;
+                // left: 50%;
+                // margin-left: -950px;
             }
         }
     }
 
+    .add_two {
+        a {
+            height: 0;
+        }
+    }
+
+    .add_one {
+        a {
+            height: 100%;
+        }
+    }
+
+    //位置导航
     .site_nav {
         z-index: 10;
         height: 32px;
@@ -466,6 +482,7 @@ body {
         }
     }
 
+    //搜索菜单
     .header {
         // position: absolute;
         // top: -130px;
@@ -564,6 +581,7 @@ body {
         }
     }
 
+    //吸顶菜单
     .xd {
         position: fixed;
         top: 0;
@@ -587,6 +605,7 @@ body {
         }
     }
 
+    //渲染的一二级菜单
     .main_nav_wrap {
         position: relative;
         height: 46px;
@@ -771,6 +790,7 @@ body {
                 text-align: center;
                 color: #098A00;
                 cursor: pointer;
+                border: 1px solid transparent;
 
                 .cart_img {
                     display: inline-block;
@@ -859,6 +879,7 @@ body {
         }
     }
 
+    //轮播图
     .bannar {
         width: 100%;
         overflow: hidden;
@@ -896,7 +917,7 @@ body {
                 }
 
                 .jiantou {
-                    display: block;
+                    display: none;
                     width: 28px;
                     height: 62px;
                     font: 400 22px/62px simsun;
@@ -930,6 +951,7 @@ body {
         }
     }
 
+    //轮播图右边
     .cont_w {
         position: relative;
 
@@ -1024,7 +1046,325 @@ body {
             }
         }
     }
+
+    //选择性出现的折扣
+    .selfactive {
+        width: 100%;
+        height: 800px;
+        background: url(../../img/xuanze.png) center no-repeat;
+
+        .sft_cont {
+            height: 547px;
+            padding-top: 205px;
+            margin-left: -605px;
+            left: 50%;
+            display: block;
+            position: absolute;
+
+            .sft_left {
+                height: 547px;
+                float: left;
+            }
+
+            .sft_right {
+                position: absolute;
+                left: 228px;
+
+                a>img {
+                    padding: 3px;
+                    float: left;
+
+                }
+            }
+
+            .sft_foot {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+
+    .recommend {
+        width: 100%;
+
+        .rmd_cont {
+            margin-top: 6px;
+            font-family: "微软雅黑";
+            overflow: hidden;
+
+            h2 {
+                height: 46px;
+                font-weight: normal;
+                line-height: 46px;
+                border-bottom: 2px solid #4bae00;
+                overflow: hidden;
+
+                span {
+                    font-size: 20px;
+                    color: #383838;
+                    vertical-align: middle;
+                }
+
+                i {
+                    margin-left: 20px;
+                    padding: 14px 0;
+                    vertical-align: middle;
+
+                    img {
+                        width: 216px;
+                        height: 18px;
+                        margin-top: 6px;
+                    }
+                }
+            }
+        }
+
+        .madden-pro {
+            position: relative;
+            overflow: hidden;
+
+            .verticaImg {
+                float: left;
+                height: 320px;
+                position: relative;
+                width: 242px;
+
+                .img1 {
+                    height: 400px;
+                    left: -242px;
+                    display: none;
+                    position: absolute;
+                    width: 242px;
+                }
+
+                .img2>img {
+                    height: 320px;
+                    width: 242px;
+                }
+            }
+        }
+    }
+
+    //底部导航
+
+    .footer_nav {
+        margin-top: 45px;
+        border-top: 2px solid #3ea600;
+
+        .nav_cont {
+            border-left: 1px solid #ededed;
+
+            >li {
+                float: left;
+                width: 240px;
+                height: 364px;
+                border-right: 1px solid #ededed;
+                border-bottom: 1px solid #ededed;
+
+                h3 {
+                    height: 82px;
+                    font-weight: bold;
+                    padding: 0 18px;
+                    font-size: 16px;
+                    line-height: 82px;
+                    text-align: center;
+                    cursor: pointer;
+                    overflow: hidden;
+                }
+
+                div {
+                    text-align: center;
+
+
+
+                    i {
+                        display: inline-block;
+                        width: 98px;
+                        height: 98px;
+                    }
+                }
+
+                ul {
+                    height: 125px;
+                    margin-top: 25px;
+                    padding-left: 34px;
+                    overflow: hidden;
+
+                    li {
+                        float: left;
+                        width: 95px;
+                        margin-right: 8px;
+                        height: 26px;
+                        line-height: 26px;
+                        overflow: hidden;
+                    }
+                }
+
+            }
+        }
+    }
+
+    //底部
+    .footer {
+        margin-top: 45px;
+        padding-top: 45px;
+        border-top: 2px solid #e7e7e7;
+        background: #f7f7f7;
+
+        .mode_wrap {
+            margin-left: 70px;
+            overflow: hidden;
+
+            .mode {
+                position: relative;
+                float: left;
+                width: 144px;
+                margin-right: 70px;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 12px;
+                    right: 0;
+                    display: block;
+                    width: 1px;
+                    height: 78px;
+                    background: #e9e9e9;
+                }
+
+                h3 {
+                    height: 26px;
+                    margin-bottom: 5px;
+                    line-height: 26px;
+                    font-size: 16px;
+                    color: #606060;
+                    cursor: pointer;
+                }
+
+                ul>li {
+                    height: 24px;
+                    line-height: 24px;
+                    color: #606060;
+                    overflow: hidden;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .mode_foot {
+            width: 284px;
+
+            dl {
+                float: left;
+                position: relative;
+                margin-right: 45px;
+                width: 86px;
+                height: 122px;
+
+                dt {
+                    position: absolute;
+                    top: 0;
+                    left: -22px;
+                    width: 130px;
+                    height: 18px;
+                    margin-bottom: 18px;
+                    font-size: 16px;
+                    color: #c60001;
+                    text-align: center;
+                    overflow: hidden;
+                }
+
+                dd {
+                    position: relative;
+                    top: 36px;
+                }
+            }
+        }
+
+        .about_wrap {
+            padding: 25px 0 0 0;
+            margin-top: 45px;
+            border-top: 2px solid #3ea600;
+            background: #fff;
+
+            .links {
+                height: 22px;
+                line-height: 22px;
+                color: #989898;
+                overflow: hidden;
+                margin: 0 auto;
+                width: fit-content;
+
+                li {
+                    font-size: 14px;
+                    color: #606060;
+                    float: left;
+                    cursor: pointer;
+
+                    &:after {
+                        content: "|";
+                        padding: 18px;
+                    }
+
+                    &:nth-last-child(1) {
+                        color: red;
+
+                        &:after {
+                            content: "";
+                            padding: 18px;
+                        }
+                    }
+                }
+            }
+
+            .footer-2019 {
+                width: 790px;
+                margin: 28px auto 0;
+
+                .pic>a>img {
+                    width: 200px;
+                    height: 50px;
+                    margin-right: 20px;
+                }
+
+                .copyright {
+                    p {
+                        height: 22px;
+                        line-height: 22px;
+                        color: #989898;
+                        overflow: hidden;
+
+                        i {
+                            float: left;
+                            position: relative;
+                            width: 20px;
+                            height: 20px;
+                            background: url(../../img/beian.png) no-repeat;
+                            vertical-align: middle;
+                        }
+
+                        span {
+                            vertical-align: middle;
+                        }
+                    }
+
+                }
+
+                .foot_img {
+                    width: 100%;
+                    margin: 0 auto;
+                    text-align: center;
+
+                    img {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
 }
+
 
 
 .zhezhao {

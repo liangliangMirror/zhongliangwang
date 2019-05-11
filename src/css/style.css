@@ -62,8 +62,8 @@
  }
 
  .cur2 {
-     border: 1px solid #3a9900;
-     border-bottom: #fff;
+     border: 1px solid #3a9900 !important;
+     border-bottom: #fff !important;
      background: #fff;
      z-index: 111;
  }

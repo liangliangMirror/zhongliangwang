@@ -16,7 +16,6 @@ $(function () {
                                 data: { 'name': $val },
                                 dataType: 'json',
                                 success: function (str) {
-                                    console.log(str[0].uid);
                                     setCookie('uid', str[0].uid, 7);
                                     $(location).attr('href', '../indexaaa.html');
                                 }

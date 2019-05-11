@@ -113,6 +113,8 @@ $(function () {
     /*----------------渲染一级菜单 */
     $(function () {
         var $cont_nav = '';
+        var $html3 = '';
+        var $html4 = '';
         var $arr = ['樱桃', '奇异果', '橙子', '苹果', '哈密瓜', '油桃', '梨子', '番薯', '石榴', '草莓', '椰子'];
         for (var $i = 0; $i < 11; $i++) {
             var $html = '';
@@ -139,10 +141,41 @@ $(function () {
                                     </div>
                                 </div>
                             </div>
-                        </li>
-`;
+                        </li>`;
             $('.cont').html($cont_nav);
+            if ($i < 10) {
+                $html3 += `
+                <li>
+                <h3><a href="./html/list.html">生鲜蔬果</a></h3>
+                    <div>
+                       <a href="./html/list.html"> <img src="./img/foot_nav${$i + 1}.png" alt=""></a>
+                    </div>
+                    <ul class="clearFix">
+                        <li><a href="./html/list.html">进口水果</a></li>
+                        <li><a href="./html/list.html">低温乳品/饮料</a></li>
+                        <li><a href="./html/list.html">国产水果</a></li>
+                        <li><a href="./html/list.html">糕点</a></li>
+                        <li><a href="./html/list.html">海鲜水产</a></li>
+                        <li><a href="./html/list.html">蔬菜</a></li>
+                        <li><a href="./html/list.html">主食</a></li>
+                        <li><a href="./html/list.html">生鲜禽蛋</a></li>
+                        <li><a href="./html/list.html">熟食/佐餐</a></li>
+                        <li><a href="./html/list.html">冰淇淋</a></li>
+                    </ul>
+                    </li>`;
+                $html4 += `<a href="./html/list.html">
+                        <img src="./img/ad${$i + 1}.png" alt="">
+                    </a>`
+            }
+
         }
+        $('.nav_cont').html($html3);
+        $('.sft_right').html($html4);
+        $('.sft_cont a').hover(function () {
+            $(this).children().css('opacity', .8);
+        }, function () {
+            $(this).children().css('opacity', 1);
+        })
         $('.kinds').hover(function () {
             $(this).toggleClass('bg_fff').children(1).toggleClass('displayblock');
         }, function () {
@@ -157,9 +190,6 @@ $(function () {
     })
 
     // // --------------------------------二级菜单
-
-    // a标签经过时字体变绿
-
 
     /*-------------------------------nav处购物车 */
     $('.min_cart').hover(function () {
@@ -186,4 +216,24 @@ $(function () {
         }
     })
     /*---------------------------------吸顶菜单 */
+    /** -------------------------头部动画 */
+    $('.add_one').children().stop().animate({ 'height': 0 }, 1500, function () {
+        $('.add_two').children().stop().animate({ 'height': 100 }, 300);
+    });
+
+    /** -------------------------头部动画 */
+    /*轮播图按钮 */
+    $('.swiper-container').hover(function () {
+        $(this).find('.jiantou').toggleClass('displayblock');
+    }, function () {
+        $(this).find('.jiantou').toggleClass('displayblock');
+    })
+    /*轮播图按钮 */
+    /**------------------每日推送左边图 */
+    $('.verticaImg').hover(function () {
+        $(this).children().eq(0).toggleClass('displayblock').stop().animate({ 'left': '242px' }, 500);
+    }, function () {
+        $(this).children().eq(0).toggleClass('displayblock').css({ 'left': -242 })
+    })
+    /**------------------每日推送左边图 */
 })
