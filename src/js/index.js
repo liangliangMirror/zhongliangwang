@@ -236,4 +236,74 @@ $(function () {
         $(this).children().eq(0).toggleClass('displayblock').css({ 'left': -242 })
     })
     /**------------------每日推送左边图 */
+    /**        --------------推荐下面的轮播图 */
+    $(function () {
+        var $p = new Promise(function (res) {
+            $.ajax({
+                type: 'get',
+                url: 'http://localhost:8080/erjieduanxiangmu/src/api/verticabox.php',
+                dataType: 'json',
+                success: function (str) {
+                    res(str);
+                }
+            })
+        })
+        $p.then(function (res) {
+            var $html = res.map(function (item) {
+                return `<li>
+                                    <a href="" class="imgChange">
+                                        <img src="${item.img1}" alt="">
+                                    </a>
+                                    <div class="inforBox">
+                                        <p class="txtBt"><a href="">${item.title}</a></p>
+                                        <p class="txtInfor"><a href="">${item.variety}</a></p>
+                                        <p class="buy-btn">
+                                            <span>
+                                                ￥<span>${item.price}</span>
+                                            </span>
+                                            <a href="">
+                                                去看看
+                                            </a>
+                                        </p>
+                                    </div>
+                                </li>`
+            }).join('');
+            $('.verticabox .qkk').html($html);
+            $('.verticabox img').hover(function () {
+                $(this).toggleClass('img2');
+            }, function () {
+                $(this).toggleClass('img2');
+            })
+        })
+        $('.verticabox').hover(function () {
+            $(this).find('.btn').toggleClass('displayblock');
+        }, function () {
+            $(this).find('.btn').toggleClass('displayblock');
+        })
+        $('.verticabox').on('click', '.btn', function () {
+            var $iw = $(this).parent().children('ul').offset().left;
+            var $ow = $(this).parent().children('ul').children('li').eq(1).width();
+            if ($iw >= 0) {
+                $(this).parent().children('ul').animate({ 'left': -(4 * $ow + 20) }, 500);
+            } else {
+                $(this).parent().children('ul').animate({ 'left': 0 }, 500);
+            }
+        })
+    })
+    $('.w2420 img').hover(function () {
+        $(this).animate({ 'left': -10 }, 300);
+    }, function () {
+        $(this).animate({ 'left': 0 }, 300);
+    })
+
+    /**        --------------推荐下面的轮播图 */
+
+    /** -------------------渲染的详情 */
+    $('.floor-r .tit li').on('mouseover', function () {
+        var $index = $(this).index();
+        $(this).addClass('tit_cur').siblings().removeClass('tit_cur');
+        $(this).parents('.floor-r').children('div').eq($index).addClass('displayblock').siblings().removeClass('displayblock');
+
+    })
+    /** -------------------渲染的详情 */
 })
