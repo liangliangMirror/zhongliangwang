@@ -122,18 +122,18 @@ $(function () {
                 $html += ` 
              <h4>精品${$arr[$i]}</h4>
                                         <ul class="c_kinds_ul">
-                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
-                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
-                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
-                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
-                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
-                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
-                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
-                                            <li><a href="./html/list.html">${$arr[$i]}</a></li>
+                                            <li><a href="###">${$arr[$i]}</a></li>
+                                            <li><a href="###">${$arr[$i]}</a></li>
+                                             <li><a href="###">${$arr[$i]}</a></li>
+                                          <li><a href="###">${$arr[$i]}</a></li>
+                                           <li><a href="###">${$arr[$i]}</a></li>
+                                             <li><a href="###">${$arr[$i]}</a></li>
+                                           <li><a href="###">${$arr[$i]}</a></li>
+                                             <li><a href="###">${$arr[$i]}</a></li>
                                         </ul>`;
             }
             $cont_nav += `<li class="kinds">
-                            <h3 class="title"><b></b><a href="./html/list.html">${$arr[$i]}水产</a> <a href="./html/list.html">水果${$arr[$i]}</a></h3>
+                            <h3 class="title"><b></b><a href="###">${$arr[$i]}水产</a><a href="###">水果${$arr[$i]}</a></h3>
                             <div class="sub_kinds">
                                 <div class="kinds-box">
                                     <div class="c_kinds clearFix">
@@ -169,6 +169,9 @@ $(function () {
             }
 
         }
+        $('.cont a').on('click', function () {
+            window.location.href = 'http://localhost:8080/erjieduanxiangmu/src/html/list.html';
+        })
         $('.nav_cont').html($html3);
         $('.sft_right').html($html4);
         $('.sft_cont a').hover(function () {

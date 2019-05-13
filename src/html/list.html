@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>列表页</title>
+    <!-- <link rel="shortcut icon" href="图片路径" type="image/x-icon" />图标 -->
     <link rel="stylesheet" href="../sass/css/indexaaa.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../lib/font_tb0zqkfwmp/iconfont.css">
@@ -15,6 +16,7 @@
     <script src="../js/common.js"></script>
     <script src="../js/index.js"></script>
     <script src="../js/list.js"></script>
+    <script src="../lib/paging.js"></script>
 </head>
 
 <body>
@@ -391,8 +393,6 @@
                                 <li><a href="/Sort-31346-500261.htm">猕猴桃/奇异果</a></li>
                             </ul>
                         </div>
-
-
                     </div>
                     <i>></i>
                     <div class="one-level fl clearfix">
@@ -413,8 +413,6 @@
                                 <li><a href="/Sort-31346-500261.htm">猕猴桃/奇异果</a></li>
                             </ul>
                         </div>
-
-
                     </div>
                     <i>></i>
                 </div>
@@ -422,7 +420,6 @@
                         type="text" placeholder="在当前条件下搜索">
                     <i onclick=" return checkProductListForm()"></i></div>
             </div>
-
         </div>
         <div class="clearFix main-warp width">
             <div class="main-l fl">
@@ -433,11 +430,11 @@
             <div class="main-r fl">
                 <div class="sort">
                     <div class="sort-1 clearFix">
-                        <a href="" class="select">综合</a>
-                        <a href="">销量</a>
-                        <a href="">价格</a>
-                        <a href="">评论数</a>
-                        <a href="">时间</a>
+                        <a href="###" class="zonghe select">综合</a>
+                        <a href="###">销量</a>
+                        <a href="###" class="jiage">价格</a>
+                        <a href="###" class="pinglun">评论数</a>
+                        <a href="###">时间</a>
                         <div class="inp fl">
                             <input type="text" class="beginprice" placeholder="最低价"><span>—</span>
                             <input type="text" class="endprice" placeholder="最高价">
@@ -453,19 +450,19 @@
                     </ul>
                 </div>
             </div>
-
         </div>
-        <div class="product-list">
-            <ul class="cont">
-                <li id="product_item_649707" data-productid="649707" class="">
+        <div class="list_product-list width">
+            <ul class="list_cont">
+                <!-- <li id="product_item_649707" data-productid="649707" class="">
                     <div class="tab-content" data-gzpid="649707">
                         <div class="pImg" id="_gatrack_productlist_listpic_649707" data-product-id="649707">
-                            <a href="###" target="_blank"> <img class="lazyload"
+                            <a href="###" target="_blank">
+                                <img class="lazyload"
                                     src="http://pic1.womai.com/upload/601/603/606/64306/280374/82800/553100/649707_0_pic500_2209.jpg"
                                     alt="zespri佳沛 新西兰阳光金奇异果6粒盒装  540g"
                                     original="http://pic1.womai.com/upload/601/603/606/64306/280374/82800/553100/649707_0_pic500_2209.jpg">
                                 <div class="label_icon">
-                                    <span class="new_icon_bg png">团购</span>
+                                    <span class="new_icon_bg png">抢购</span>
                                 </div>
                             </a>
                         </div>
@@ -496,8 +493,11 @@
                                 onclick="addNotice(200,649707)" name="notice"><b class="png"></b>到货通知</span>
                         </div>
                     </div>
-                </li>
+                </li> -->
             </ul>
+            <div class="list_btn">
+
+            </div>
         </div>
         <div class="footer">
             <div class="width clearFix">
