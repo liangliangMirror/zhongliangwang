@@ -517,6 +517,7 @@ body {
   height: 410px;
   padding: 12px 0 28px 0;
   background-color: #3ea600;
+  z-index: 10;
 }
 #homePage .main_nav_wrap .all_kinds .cont .kinds {
   float: left;
