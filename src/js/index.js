@@ -59,13 +59,13 @@ $(function () {
     } else {
         var $html = '';
         $html = `<li class="welcome">hi，欢迎来我买网</li>
-                    <li class="t_item"><a href="./html/enter.html">登录</a></li>
-                    <li class="t_item"><a href="./html/register.html">注册</a></li>`;
+                    <li class="t_item"><a href="http://localhost:8080/erjieduanxiangmu/src/html/enter.html">登录</a></li>
+                    <li class="t_item"><a href="http://localhost:8080/erjieduanxiangmu/src/html/register.html">注册</a></li>`;
         $('#top_login_span').html($html);
         var $html2 = '';
         $html2 = ` <p class="login">
                                 <span>您还没有登录！</span>
-                                <a href="./html/enter.html">登录</a>
+                                <a href="http://localhost:8080/erjieduanxiangmu/src/html/enter.html">登录</a>
                             </p>
                             <ul class="item">
                                 <li>待付款订单</li>
@@ -291,9 +291,9 @@ $(function () {
         })
     })
     $('.w2420 img').hover(function () {
-        $(this).animate({ 'left': -10 }, 300);
+        $(this).stop().animate({ 'left': -10 }, 300);
     }, function () {
-        $(this).animate({ 'left': 0 }, 300);
+        $(this).stop().animate({ 'left': 0 }, 300);
     })
 
     /**        --------------推荐下面的轮播图 */
@@ -304,6 +304,56 @@ $(function () {
         $(this).addClass('tit_cur').siblings().removeClass('tit_cur');
         $(this).parents('.floor-r').children('div').eq($index).addClass('displayblock').siblings().removeClass('displayblock');
 
+    })
+    $(function () {
+        $.ajax({
+            url: 'http://localhost:8080/erjieduanxiangmu/src/api/index_wrap.php',
+            dataType: 'json',
+            success: function (str) {
+                var $str1 = str.splice(0, 6);
+                var $str2 = str.splice(0, 8);
+                var $xuanran = function (item) {
+                    return `
+                    <li data-gid="${item.gid}">
+                            <a href="###">
+                                <img src="${item.img1}"
+                                    alt="">
+                            </a>
+                            <p class="name">
+                                ${item.title}
+                            </p>
+                            <p class="price">
+                                <span>￥</span>
+                                <span class="bold">${item.price}</span>
+                            </p>
+                        </li>
+                    `;
+                }
+                var $html1 = $str1.map(function (item) {
+                    return $xuanran(item);
+                }).join('');
+                var $html2 = $str2.map(function (item) {
+                    return $xuanran(item);
+                }).join('');
+                for (var $i = 0; $i < $('.floor-r .transparency_wrap').size(); $i++) {
+                    if ($i % 2 == 0) {
+                        $('.floor-r .transparency_wrap').eq($i).html($html1).children().eq(0).addClass('first');
+                    } else {
+                        $('.floor-r .transparency_wrap').eq($i).html($html2);
+                    }
+                }
+                $('.transparency_wrap img').hover(function () {
+                    $(this).stop().animate({ 'left': 10 }, 300)
+                }, function () {
+                    $(this).stop().animate({ 'left': 0 }, 300)
+                })
+                $('.transparency_wrap').hover(function () {
+                    $(this).find('.name').css('color', '#8cb91e');
+                }, function () {
+                    $(this).find('.name').css('color', '#606060');
+                })
+            }
+        })
     })
     /** -------------------渲染的详情 */
 })

@@ -1331,6 +1331,56 @@ body {
 #homePage .floor .floor-r .con .adv .jiantou:nth-child(3) {
   background-position-x: -60px;
 }
+#homePage .floor .floor-r .con ul {
+  overflow: auto;
+}
+#homePage .floor .floor-r .con ul li {
+  float: left;
+  width: 241px;
+  height: 250px;
+  border-bottom: 1px solid #ededed;
+  border-right: 1px solid #ededed;
+  overflow: hidden;
+}
+#homePage .floor .floor-r .con ul li a {
+  width: 240px;
+  height: 190px;
+  text-align: center;
+  display: block;
+}
+#homePage .floor .floor-r .con ul li a img {
+  position: relative;
+  left: 0;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  margin-top: 6px;
+}
+#homePage .floor .floor-r .con ul li .name {
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #383838;
+  cursor: pointer;
+}
+#homePage .floor .floor-r .con ul li p {
+  width: 200px;
+  margin-left: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#homePage .floor .floor-r .con ul li .price {
+  height: 26px;
+  font-size: 14px;
+  line-height: 26px;
+  color: #dd0800;
+}
+#homePage .floor .floor-r .con ul li .price .bold {
+  font-size: 20px;
+}
+#homePage .floor .floor-r .tab .transparency_wrap .first {
+  margin-right: 484px;
+}
 #homePage .floor1 .floor-l h3 {
   color: #88A9E2;
 }
@@ -1339,6 +1389,15 @@ body {
 }
 #homePage .floor1 .floor-l .con {
   background: #88a9e2;
+}
+#homePage .floor2 .floor-l h3 {
+  color: #87D0EB;
+}
+#homePage .floor2 .floor-l h3:after {
+  background: #87D0EB;
+}
+#homePage .floor2 .floor-l .con {
+  background: #87D0EB;
 }
 #homePage .footer_nav {
   margin-top: 45px;

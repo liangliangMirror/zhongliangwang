@@ -6,8 +6,6 @@ body {
     height: 100%;
 }
 
-$font12:12px;
-
 #fiex {
     height: 100%;
     width: 34px;
@@ -1517,6 +1515,69 @@ $font12:12px;
                         }
                     }
                 }
+
+                ul {
+                    overflow: auto;
+
+                    li {
+                        float: left;
+                        width: 241px;
+                        height: 250px;
+                        border-bottom: 1px solid #ededed;
+                        border-right: 1px solid #ededed;
+                        overflow: hidden;
+
+                        a {
+                            width: 240px;
+                            height: 190px;
+                            text-align: center;
+                            display: block;
+
+                            img {
+                                position: relative;
+                                left: 0;
+                                width: 180px;
+                                height: 180px;
+                                margin: 0 auto;
+                                margin-top: 6px;
+                            }
+                        }
+
+                        .name {
+                            height: 24px;
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: #383838;
+                            cursor: pointer;
+                        }
+
+                        p {
+                            width: 200px;
+                            margin-left: 20px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+
+                        .price {
+                            height: 26px;
+                            font-size: 14px;
+                            line-height: 26px;
+                            color: #dd0800;
+
+                            .bold {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .tab {
+                .transparency_wrap {
+                    .first {
+                        margin-right: 484px;
+                    }
+                }
             }
         }
     }
@@ -1524,7 +1585,10 @@ $font12:12px;
     .floor1 {
         .floor-l {
             h3 {
+
                 color: #88A9E2;
+
+
 
                 &:after {
                     background: #88A9E2;
@@ -1534,6 +1598,27 @@ $font12:12px;
             .con {
                 background: #88a9e2;
             }
+
+        }
+    }
+
+    .floor2 {
+        .floor-l {
+            h3 {
+
+                color: #87D0EB;
+
+
+
+                &:after {
+                    background: #87D0EB;
+                }
+            }
+
+            .con {
+                background: #87D0EB;
+            }
+
         }
     }
 
@@ -1756,8 +1841,6 @@ $font12:12px;
     }
 }
 
-
-
 .zhezhao {
     position: fixed;
     left: 0px;
@@ -1767,5 +1850,4 @@ $font12:12px;
     opacity: 0.5;
     background-color: rgb(0, 0, 0);
     z-index: 1005;
-    // display: none;
 }
