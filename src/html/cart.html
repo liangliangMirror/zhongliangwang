@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../sass/css/indexaaa.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../sass/css/cart.css">
+    <link rel="stylesheet" href="../lib/cityPicker.css">
+    <script src="../lib/jquery-1.10.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/cart.js"></script>
+    <title>购物车</title>
+</head>
+
+<body>
+    <div id="homePage" class="w2">
+        <div class="site_nav">
+            <div class="site_nav_cot">
+                <ul class="navr fr">
+                    <li class="mycount navr_li_one">
+                        <p class="navr_p_one">
+                            <span class="text">我的账户
+                                <i class="png"></i>
+                            </span>
+                        </p>
+                        <div class="myaccount_cont">
+                        </div>
+                    </li>
+                </ul>
+                <ul class="fr clearFix" id="top_login_span">
+                </ul>
+
+            </div>
+        </div>
+        <div class="header_div w">
+            <h1 class="logo_a">
+                <a href="http://localhost:8080/erjieduanxiangmu/src/indexaaa.html">
+                    <img src="../img/logo.png" alt="">
+                </a>
+            </h1>
+            <span>
+                <img src="../img/cart1.jpg" alt="">
+            </span>
+        </div>
+        <div class="trip_div">
+            <span class="trip_content">
+                我的购物车
+            </span>
+            <div class="delivery-tip fl">
+                <span class="delivery-tit fl">送至：</span>
+                <div class="text">
+                    <input type="text" id="cityChoice" value="广州市">
+                    <input type=" hidden" id="province" value="">
+                    <input type="hidden" id="city" value="">
+                    <!-- <div class="region-text">广东省荔湾区</div> -->
+                </div>
+                <script src="../lib/cityPicker.js"></script>
+                <script src="../lib/cityData.js"></script>
+                <script>
+                    var cityPicker = new IIInsomniaCityPicker({
+                        data: cityData,
+                        target: '#cityChoice',
+                        valType: 'k-v',
+                        hideCityInput: '#city',
+                        hideProvinceInput: '#province',
+                        callback: function (city_id) {
+
+                        }
+                    });
+
+                    cityPicker.init();
+                </script>
+            </div>
+            <a href="http://localhost:8080/erjieduanxiangmu/src/indexaaa.html" class="fr">继续购物>></a>
+        </div>
+        <div class="shopping_cart">
+            <div class="order_nav clearFix">
+                <ul class="fl">
+                    <li>
+                        我买网发货单(<span class="jian">0</span>)
+                    </li>
+                </ul>
+                <div class="fr">
+                    <span class="fl">
+                        已选商品(含预估运费) <span>￥</span> <em>0</em>
+                    </span>
+                    <a href="###" class="fr">
+                        去结算
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="order_contents">
+            <div class="ordercont_titleline">
+                <div class="odct_title ordercon_title1">商品</div>
+                <div class="odct_title ordercon_title2">单价</div>
+                <div class="odct_title ordercon_title3">数量</div>
+                <div class="odct_title ordercon_title4">重量</div>
+                <div class="odct_title ordercon_title5">小计</div>
+                <div class="odct_title ordercon_title6">操作</div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="loadshowcart1">
+            <!-- <div class="ordercont_content_cw clearFix">
+                <div class="ordercont-title-cw  clearFix">
+                    <div class="title fl">
+                        <input type="checkbox" name="" id="all" class="fl" checked="checked">
+                        <label for="all">自营常温品</label>
+                    </div>
+
+                </div>
+                <div class="ordercont-cw-con">
+                    <div class="content_type_zp type1 clearFix">
+                        <div class="ct_zp fl">
+                            <div class="clearFix">
+                                <input type="checkbox" name="checkbox" checked="callback" class="fl">
+                                <a href="###" class="img_a">
+                                    <img src="http://pic2.womai.com/upload/601/603/606/6060/6065/6086/595767/595767_0_pic60_708.jpg"
+                                        alt="">
+                                </a>
+                                <div class="cent fl">
+                                    <a href="###">
+                                        惠享【时怡中粮优选什锦果仁(罐装1020g）】 ，精选国外进口原料，品质安全有保障，老少皆...
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="cont2 fl">
+                            ￥<span class="cont2_jiage">333</span>
+                        </span>
+                        <div class="cont3 ">
+                            <span class="fl prev">-</span>
+                            <input type="text" value="1" class="fl">
+                            <span class="fl">+</span>
+                        </div>
+                        <span class="cont4 fl">
+                            1321
+                        </span>
+                        <div class="cont5 fl">
+                            ￥ <span>113</span>
+                        </div>
+                        <div class="cont6 fl">
+                            删除
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="order_amount clearFix">
+            <div class="ordercont_edit fl">
+                <div class="one">
+                    <input type="checkbox" id="qx" name="quan">
+                    <label for="qx">全选</label>
+                    <a href="##" class="">删除</a>
+                </div>
+
+            </div>
+            <div class="ordam_right">
+                <div class="ordam-item1 clearFix">
+                    <span class="oar_title fl">总重量：</span>
+                    <span class="oar_weight fl"><span>1.379</span> g</span>
+                    <span class="oar_title fl">商品金额：</span>
+                    <span id="j-totaldeliveryrule1" class="oar-money fl">￥<span>0.00</span> </span>
+                </div>
+                <div class="ordam-total clearFix">
+                    <span class="num fl">已选 <em>2</em> 件</span>
+                    <span class="oar-money-total ">￥<span>111</span></span>
+                    <span class="oar_title-total fr">应付金额：</span>
+                </div>
+                <div class="ord-btn">
+                    <a href="###">去结算</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

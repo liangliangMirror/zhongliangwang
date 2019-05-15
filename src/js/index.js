@@ -37,7 +37,7 @@ $(function () {
     if (getCookie("uid")) {
         var $html = '';
         $html = `<li class="welcome">${getCookie("uid")}，欢迎回来</li>
-                    <li class="t_item"><a href="indexaaa.html" class="removeCk">退出</a></li>`;
+                    <li class="t_item"><a href="http://localhost:8080/erjieduanxiangmu/src/indexaaa.html" class="removeCk">退出</a></li>`;
         $('#top_login_span').html($html);
         var $html2 = '';
         $html2 = ` <p class="login">

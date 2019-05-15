@@ -1,0 +1,615 @@
+@charset "UTF-8";
+#homePage .crumbs {
+  height: 34px;
+  line-height: 34px; }
+  #homePage .crumbs a {
+    display: inline-block;
+    padding: 0 5px; }
+#homePage .dl_wrap .dl-left {
+  width: 970px; }
+  #homePage .dl_wrap .dl-left .img-magnifier {
+    width: 402px; }
+    #homePage .dl_wrap .dl-left .img-magnifier .preview {
+      height: 400px;
+      width: 400px;
+      border: 1px solid #dcdddd;
+      overflow: hidden; }
+      #homePage .dl_wrap .dl-left .img-magnifier .preview .jqzoom {
+        float: left;
+        border: none;
+        position: relative;
+        padding: 0px;
+        cursor: move;
+        margin: 0px;
+        display: block; }
+        #homePage .dl_wrap .dl-left .img-magnifier .preview .jqzoom img {
+          width: 400px;
+          height: 400px; }
+    #homePage .dl_wrap .dl-left .img-magnifier .spec-scroll {
+      clear: both;
+      width: 402px;
+      margin-top: 5px;
+      overflow: hidden;
+      max-height: 160px;
+      margin-bottom: 10px; }
+      #homePage .dl_wrap .dl-left .img-magnifier .spec-scroll ul {
+        min-height: 80px;
+        width: 425px; }
+        #homePage .dl_wrap .dl-left .img-magnifier .spec-scroll ul li {
+          float: left;
+          width: 60px;
+          height: 60px;
+          margin: 6px 25px 2px 0; }
+        #homePage .dl_wrap .dl-left .img-magnifier .spec-scroll ul img {
+          width: 58px;
+          height: 58px;
+          border: 1px solid #ededed;
+          cursor: pointer; }
+        #homePage .dl_wrap .dl-left .img-magnifier .spec-scroll ul .select img {
+          border: 1px solid #96ca73; }
+    #homePage .dl_wrap .dl-left .img-magnifier > ul li {
+      position: relative;
+      float: left;
+      padding-right: 10px;
+      vertical-align: middle;
+      cursor: pointer; }
+      #homePage .dl_wrap .dl-left .img-magnifier > ul li span {
+        position: relative;
+        display: inline-block;
+        padding-left: 16px; }
+        #homePage .dl_wrap .dl-left .img-magnifier > ul li span i {
+          position: absolute;
+          left: 0;
+          width: 13px;
+          height: 12px;
+          font-size: 12px;
+          overflow: hidden;
+          margin-right: 5px;
+          color: #96ca73; }
+  #homePage .dl_wrap .dl-left .p-infor {
+    width: 540px; }
+    #homePage .dl_wrap .dl-left .p-infor .pro_tit_top .p-zy {
+      float: left;
+      padding: 0px 3px;
+      margin: 2px 4px 2px 0px;
+      color: #fff;
+      background-color: #c20312;
+      border-radius: 2px; }
+    #homePage .dl_wrap .dl-left .p-infor .pro_tit_top .p-title {
+      width: 506px;
+      height: auto;
+      margin: 5px 0;
+      font: bold 16px/22px "微软雅黑";
+      color: #666;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    #homePage .dl_wrap .dl-left .p-infor .ruleInfo {
+      background: #f5f5f5;
+      position: relative; }
+      #homePage .dl_wrap .dl-left .p-infor .ruleInfo .price-wrap {
+        height: auto;
+        padding-left: 16px;
+        padding-top: 20px;
+        background: #f5f5f5;
+        overflow: hidden; }
+        #homePage .dl_wrap .dl-left .p-infor .ruleInfo .price-wrap .dl_price {
+          display: inline-block;
+          height: 24px;
+          font-weight: bold;
+          line-height: 24px;
+          font-size: 26px;
+          font-family: "微软雅黑";
+          color: #c40000; }
+          #homePage .dl_wrap .dl-left .p-infor .ruleInfo .price-wrap .dl_price em {
+            font-size: 16px; }
+        #homePage .dl_wrap .dl-left .p-infor .ruleInfo .price-wrap .group {
+          display: inline-block;
+          height: 18px;
+          margin: 6px 10px 0px 10px;
+          padding: 0 5px;
+          font-family: "微软雅黑";
+          line-height: 18px;
+          background: #c40000;
+          color: #fff; }
+      #homePage .dl_wrap .dl-left .p-infor .ruleInfo .seasondiv {
+        padding: 9px 0 5px 9px; }
+        #homePage .dl_wrap .dl-left .p-infor .ruleInfo .seasondiv .season_content_2 {
+          height: 20px; }
+          #homePage .dl_wrap .dl-left .p-infor .ruleInfo .seasondiv .season_content_2 li {
+            margin: 0px 61px 0px 10px;
+            float: left; }
+        #homePage .dl_wrap .dl-left .p-infor .ruleInfo .seasondiv .season_content li {
+          color: #999999;
+          margin: 0px 57px 0px 5px;
+          width: 57px;
+          text-align: center; }
+        #homePage .dl_wrap .dl-left .p-infor .ruleInfo .seasondiv .season_content .cur_red {
+          color: #ff5247;
+          font-size: 13px; }
+        #homePage .dl_wrap .dl-left .p-infor .ruleInfo .seasondiv .season_icon {
+          background: url(../../img/dl_ss-1.jpg) no-repeat;
+          background-size: 389px 40px;
+          height: 40px;
+          width: 389px;
+          background-position: 0 0;
+          margin-left: 17px; }
+      #homePage .dl_wrap .dl-left .p-infor .ruleInfo .promotions {
+        position: relative;
+        padding: 13px 0 10px 16px; }
+        #homePage .dl_wrap .dl-left .p-infor .ruleInfo .promotions .pro_m_line {
+          margin-top: 6px;
+          width: 500px;
+          padding-bottom: 0px;
+          padding-left: 0px; }
+          #homePage .dl_wrap .dl-left .p-infor .ruleInfo .promotions .pro_m_line dl dt {
+            height: 20px;
+            line-height: 21px;
+            padding: 0 5px;
+            text-align: center;
+            color: #fff;
+            float: left;
+            background: #c40000 none repeat scroll 0 0; }
+          #homePage .dl_wrap .dl-left .p-infor .ruleInfo .promotions .pro_m_line dl dd {
+            float: left;
+            margin: 0 15px 0 5px; }
+            #homePage .dl_wrap .dl-left .p-infor .ruleInfo .promotions .pro_m_line dl dd span {
+              line-height: 20px; }
+          #homePage .dl_wrap .dl-left .p-infor .ruleInfo .promotions .pro_m_line .man_detail {
+            position: relative;
+            margin-top: 2px;
+            margin-top: 1px\9;
+            padding-left: 10px; }
+            #homePage .dl_wrap .dl-left .p-infor .ruleInfo .promotions .pro_m_line .man_detail .png {
+              display: block;
+              position: absolute;
+              top: 4px;
+              left: 0;
+              width: 11px;
+              height: 11px;
+              background: url(../images/detail/newDetail_btn.png) no-repeat -122px 0; }
+            #homePage .dl_wrap .dl-left .p-infor .ruleInfo .promotions .pro_m_line .man_detail a {
+              color: #c40000;
+              cursor: pointer;
+              margin-left: 6px; }
+    #homePage .dl_wrap .dl-left .p-infor .loadRegion .address {
+      line-height: 34px;
+      padding-left: 16px; }
+      #homePage .dl_wrap .dl-left .p-infor .loadRegion .address dt {
+        width: 42px;
+        float: left; }
+      #homePage .dl_wrap .dl-left .p-infor .loadRegion .address .addr_select {
+        float: left;
+        height: 34px;
+        position: relative;
+        float: left; }
+        #homePage .dl_wrap .dl-left .p-infor .loadRegion .address .addr_select .addr_text {
+          position: relative;
+          width: auto;
+          height: 24px;
+          margin-top: 6px;
+          margin-right: 10px;
+          padding: 0 17px 0 5px;
+          line-height: 24px;
+          background: #fff;
+          border: 1px solid #cacaca; }
+          #homePage .dl_wrap .dl-left .p-infor .loadRegion .address .addr_select .addr_text .region-text {
+            height: 22px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 0; }
+          #homePage .dl_wrap .dl-left .p-infor .loadRegion .address .addr_select .addr_text s {
+            position: absolute;
+            top: 10px;
+            right: 3px;
+            display: block;
+            width: 10px;
+            height: 5px;
+            background: url(../../img/list_icon.png) no-repeat -47px -68px; }
+    #homePage .dl_wrap .dl-left .p-infor .loadBuy .merge {
+      border: none;
+      margin-top: 0;
+      padding-top: 0;
+      padding-left: 16px; }
+      #homePage .dl_wrap .dl-left .p-infor .loadBuy .merge .choose {
+        overflow: hidden; }
+        #homePage .dl_wrap .dl-left .p-infor .loadBuy .merge .choose dl dt {
+          float: left;
+          margin: 8px 0;
+          line-height: 30px; }
+        #homePage .dl_wrap .dl-left .p-infor .loadBuy .merge .choose dl dd {
+          float: left;
+          margin: 8px 0;
+          line-height: 30px; }
+          #homePage .dl_wrap .dl-left .p-infor .loadBuy .merge .choose dl dd .choose-amount {
+            display: inline-block;
+            width: 73px;
+            height: 28px;
+            margin-right: 8px;
+            border: 1px solid #dcdcdc;
+            vertical-align: middle;
+            overflow: hidden; }
+            #homePage .dl_wrap .dl-left .p-infor .loadBuy .merge .choose dl dd .choose-amount span {
+              width: 13px;
+              height: 28px;
+              line-height: 28px;
+              text-align: center;
+              cursor: pointer;
+              overflow: hidden; }
+            #homePage .dl_wrap .dl-left .p-infor .loadBuy .merge .choose dl dd .choose-amount .proinput {
+              width: 45px;
+              height: 28px;
+              padding: 0;
+              line-height: 28px;
+              text-align: center;
+              border: none;
+              border-left: 1px solid #dcdcdc;
+              border-right: 1px solid #dcdcdc; }
+      #homePage .dl_wrap .dl-left .p-infor .loadBuy .merge .btn-box {
+        position: relative;
+        padding-top: 15px;
+        margin-left: 16px; }
+        #homePage .dl_wrap .dl-left .p-infor .loadBuy .merge .btn-box .erweima {
+          position: absolute;
+          left: 230px;
+          margin-top: -155px;
+          width: 120px;
+          height: 120px;
+          padding: 10px;
+          background: #fff;
+          border: 1px solid #d2d2d2;
+          display: none; }
+          #homePage .dl_wrap .dl-left .p-infor .loadBuy .merge .btn-box .erweima img {
+            width: 100%; }
+        #homePage .dl_wrap .dl-left .p-infor .loadBuy .merge .btn-box ul li {
+          position: relative;
+          float: left;
+          margin-right: 20px;
+          cursor: pointer; }
+        #homePage .dl_wrap .dl-left .p-infor .loadBuy .merge .btn-box ul .buyBtn {
+          width: 194px;
+          height: 24px;
+          color: #fff;
+          font: 16px/24px "微软雅黑";
+          text-align: center;
+          padding-top: 11px;
+          padding-bottom: 11px;
+          background: #c40000;
+          margin-left: -16px; }
+        #homePage .dl_wrap .dl-left .p-infor .loadBuy .merge .btn-box ul .coupon-phone {
+          text-align: center;
+          font: 16px/24px "微软雅黑";
+          width: 170px;
+          height: 24px;
+          padding: 10px 8px;
+          border: 1px solid #c40000;
+          overflow: hidden; }
+          #homePage .dl_wrap .dl-left .p-infor .loadBuy .merge .btn-box ul .coupon-phone b {
+            width: 20px;
+            height: 20px;
+            font-size: 20px;
+            margin-right: 6px;
+            vertical-align: middle; }
+    #homePage .dl_wrap .dl-left .p-infor .loadBuy .pro_pop {
+      position: relative;
+      width: 540px;
+      z-index: 1000;
+      display: none; }
+      #homePage .dl_wrap .dl-left .p-infor .loadBuy .pro_pop .buy_pop {
+        display: block;
+        height: 125px;
+        top: -122px;
+        position: absolute;
+        left: 0px;
+        width: 485px;
+        margin-top: -175px;
+        margin-right: -244px;
+        border: 1px solid #8cb91e;
+        background: #fff; }
+        #homePage .dl_wrap .dl-left .p-infor .loadBuy .pro_pop .buy_pop .buy_pop_close {
+          width: 17px;
+          height: 17px;
+          position: absolute;
+          right: 7px;
+          top: 6px;
+          color: #fff;
+          text-align: center;
+          font-size: 16px;
+          cursor: pointer;
+          background: #8cb91e; }
+      #homePage .dl_wrap .dl-left .p-infor .loadBuy .pro_pop .buy_ico {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background: #8cb91e;
+        font-size: 20px;
+        text-align: center;
+        padding-top: 3px;
+        color: #fff;
+        top: 24px;
+        left: 35px;
+        border-radius: 50%; }
+      #homePage .dl_wrap .dl-left .p-infor .loadBuy .pro_pop .pop_btn_r {
+        cursor: pointer;
+        width: 76px;
+        height: 21px;
+        background: #8cb91e;
+        position: absolute;
+        top: 91px;
+        left: 190px;
+        color: #fff;
+        line-height: 21px;
+        font-family: "Microsoft YaHei";
+        text-align: center; }
+      #homePage .dl_wrap .dl-left .p-infor .loadBuy .pro_pop .buy_pop_top {
+        margin-left: 28px;
+        width: 430px;
+        padding-top: 30px;
+        height: 93px; }
+        #homePage .dl_wrap .dl-left .p-infor .loadBuy .pro_pop .buy_pop_top .buy_title {
+          color: #898989;
+          font-size: 14px;
+          font-weight: bold;
+          padding-left: 52px; }
+        #homePage .dl_wrap .dl-left .p-infor .loadBuy .pro_pop .buy_pop_top .buy-font {
+          color: #595757;
+          padding-left: 52px;
+          padding-top: 13px; }
+          #homePage .dl_wrap .dl-left .p-infor .loadBuy .pro_pop .buy_pop_top .buy-font .buy-jiage {
+            color: #e9001c;
+            font-weight: bold; }
+        #homePage .dl_wrap .dl-left .p-infor .loadBuy .pro_pop .buy_pop_top .btn {
+          padding-top: 17px;
+          padding-left: 52px; }
+          #homePage .dl_wrap .dl-left .p-infor .loadBuy .pro_pop .buy_pop_top .btn a {
+            width: 99px;
+            height: 21px;
+            display: block;
+            background: #f40;
+            color: #fff;
+            font-family: "Microsoft YaHei";
+            line-height: 21px;
+            text-align: center; }
+    #homePage .dl_wrap .dl-left .p-infor .dl_btn-box {
+      position: relative;
+      padding-top: 15px;
+      margin-left: 16px; }
+      #homePage .dl_wrap .dl-left .p-infor .dl_btn-box dl {
+        margin-top: 20px;
+        overflow: hidden; }
+        #homePage .dl_wrap .dl-left .p-infor .dl_btn-box dl dt {
+          width: 42px;
+          float: left; }
+#homePage .jiatu {
+  margin-left: 38px;
+  margin-top: 30px; }
+#homePage .dl-liuyan {
+  width: 730px;
+  margin: 45px auto 0; }
+  #homePage .dl-liuyan .common_tit {
+    border: 1px solid #e9e9e9;
+    border-top: 2px solid #3ea600;
+    background: #f7f8f8;
+    padding-top: 4px;
+    height: 24px;
+    color: #595757;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    padding-left: 15px; }
+  #homePage .dl-liuyan .common_top {
+    margin-top: 20px; }
+    #homePage .dl-liuyan .common_top .common_t_l {
+      float: left;
+      width: 200px; }
+      #homePage .dl-liuyan .common_top .common_t_l .score_circle {
+        width: 130px;
+        height: 130px;
+        margin: 0 0 0 25px;
+        text-align: center;
+        line-height: 130px;
+        background: url(../../img/circle.png);
+        background-position: 0px -130px; }
+        #homePage .dl-liuyan .common_top .common_t_l .score_circle span {
+          display: inline-block;
+          font-size: 18px; }
+          #homePage .dl-liuyan .common_top .common_t_l .score_circle span .pppp {
+            font-size: 36px;
+            color: #3ea600; }
+      #homePage .dl-liuyan .common_top .common_t_l p {
+        margin: 10px 0 0 0;
+        line-height: 1.6em;
+        text-align: center; }
+        #homePage .dl-liuyan .common_top .common_t_l p .spankk {
+          display: inline-block;
+          margin: 3px 15px 0 0;
+          color: #3ea600;
+          font-size: 18px;
+          font-weight: normal; }
+    #homePage .dl-liuyan .common_top .no_common_t_r {
+      float: left;
+      width: 510px;
+      margin: 20px 0 0 0; }
+      #homePage .dl-liuyan .common_top .no_common_t_r .line_1 {
+        margin-left: 362px;
+        padding-top: 10px; }
+        #homePage .dl-liuyan .common_top .no_common_t_r .line_1 a {
+          width: 87px;
+          height: 23px;
+          display: block;
+          background: #3ea600;
+          font-family: "Microsoft YaHei";
+          color: #fff;
+          text-align: center;
+          line-height: 23px;
+          border: 1px solid transparent; }
+          #homePage .dl-liuyan .common_top .no_common_t_r .line_1 a:hover {
+            background: #fff;
+            border-color: #3ea600; }
+      #homePage .dl-liuyan .common_top .no_common_t_r ul {
+        margin-top: 15px; }
+        #homePage .dl-liuyan .common_top .no_common_t_r ul li {
+          float: left;
+          margin-left: 25px; }
+          #homePage .dl-liuyan .common_top .no_common_t_r ul li dt {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 5px;
+            padding: 1px;
+            border: 1px solid #dcdddd; }
+        #homePage .dl-liuyan .common_top .no_common_t_r ul p {
+          margin-left: 23px; }
+          #homePage .dl-liuyan .common_top .no_common_t_r ul p span {
+            color: #e9001c; }
+          #homePage .dl-liuyan .common_top .no_common_t_r ul p a {
+            text-decoration: underline;
+            color: #3ea600; }
+  #homePage .dl-liuyan .sortRemark .common_tab {
+    height: 30px;
+    border-bottom: 1px solid #dfdfdf;
+    margin-top: 20px;
+    width: 740px;
+    height: 30px;
+    position: relative; }
+    #homePage .dl-liuyan .sortRemark .common_tab li {
+      width: 109px;
+      height: 24px;
+      margin-right: 25px;
+      padding-top: 6px;
+      float: left;
+      text-align: center;
+      font-size: 14px;
+      color: #595757;
+      font-family: "Microsoft YaHei";
+      cursor: pointer;
+      border: 1.5px solid transparent; }
+    #homePage .dl-liuyan .sortRemark .common_tab .select {
+      border-bottom: 1.5px solid #58bc58; }
+    #homePage .dl-liuyan .sortRemark .common_tab .fist {
+      position: absolute;
+      right: 0;
+      color: #595757;
+      font-family: "Microsoft YaHei";
+      text-decoration: none;
+      font-size: 12px;
+      margin-right: 0;
+      width: 106px;
+      text-align: left;
+      border: 0;
+      background: url(../../img/ico5.png) -143px -1px no-repeat; }
+  #homePage .dl-liuyan .sortRemark .liuyan {
+    width: 800px;
+    height: 400px;
+    position: fixed;
+    top: 35%;
+    display: none;
+    left: 50%;
+    margin: -200px 0 0 -380px;
+    background: #fff;
+    z-index: 33;
+    border: 1px solid #3ea600;
+    text-align: center; }
+    #homePage .dl-liuyan .sortRemark .liuyan h3 {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1.5em; }
+    #homePage .dl-liuyan .sortRemark .liuyan p {
+      width: 600px;
+      margin: 20px auto 0; }
+    #homePage .dl-liuyan .sortRemark .liuyan .liuyan_two {
+      width: 600px;
+      margin: 20px auto 0;
+      height: 40px;
+      font-size: 16px;
+      line-height: 40px; }
+      #homePage .dl-liuyan .sortRemark .liuyan .liuyan_two label {
+        float: left; }
+      #homePage .dl-liuyan .sortRemark .liuyan .liuyan_two input {
+        float: left;
+        display: inline-block;
+        height: 20px;
+        text-align: left;
+        margin-top: 7px;
+        width: 400px; }
+    #homePage .dl-liuyan .sortRemark .liuyan .liuyan_theer span {
+      margin-right: 30px;
+      float: left; }
+      #homePage .dl-liuyan .sortRemark .liuyan .liuyan_theer span label {
+        margin-right: 5px;
+        vertical-align: middle; }
+      #homePage .dl-liuyan .sortRemark .liuyan .liuyan_theer span input {
+        vertical-align: middle; }
+    #homePage .dl-liuyan .sortRemark .liuyan .liuyan_four {
+      font-size: 16px; }
+      #homePage .dl-liuyan .sortRemark .liuyan .liuyan_four span:nth-child(1) {
+        float: left;
+        margin-right: 30px; }
+      #homePage .dl-liuyan .sortRemark .liuyan .liuyan_four .ly_content {
+        float: left;
+        width: 400px;
+        display: inline-block;
+        height: 180px;
+        border: 1px solid #3ea600; }
+    #homePage .dl-liuyan .sortRemark .liuyan .liuyan_five span {
+      margin-right: 50px;
+      display: inline-block;
+      width: 80px;
+      height: 20px;
+      line-height: 20px;
+      cursor: pointer;
+      border: #3ea600 1px solid; }
+    #homePage .dl-liuyan .sortRemark .liuyan .liuyan_five .ly_btn1 {
+      color: #fff;
+      background: #58bc58; }
+    #homePage .dl-liuyan .sortRemark .liuyan .liuyan_six {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 20px;
+      height: 20px;
+      background: #58bc58;
+      display: block;
+      line-height: 20px;
+      color: #fff;
+      cursor: pointer; }
+  #homePage .dl-liuyan .sortRemark .common_content {
+    width: 740px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    color: #929292;
+    min-height: 280px; }
+    #homePage .dl-liuyan .sortRemark .common_content li {
+      margin-top: 20px;
+      list-style: none; }
+      #homePage .dl-liuyan .sortRemark .common_content li .head_icon {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #dfdfdf; }
+        #homePage .dl-liuyan .sortRemark .common_content li .head_icon img {
+          width: 50px;
+          height: 50px; }
+        #homePage .dl-liuyan .sortRemark .common_content li .head_icon i {
+          top: 64px;
+          left: 27px;
+          width: 1px;
+          background: #eee;
+          height: 86px;
+          display: block;
+          position: absolute; }
+      #homePage .dl-liuyan .sortRemark .common_content li .reply_r {
+        width: 665px;
+        margin-left: 15px; }
+        #homePage .dl-liuyan .sortRemark .common_content li .reply_r dl {
+          width: 662px;
+          margin-bottom: 20px; }
+          #homePage .dl-liuyan .sortRemark .common_content li .reply_r dl dd {
+            font-size: 12px;
+            color: #bbb; }
+        #homePage .dl-liuyan .sortRemark .common_content li .reply_r p {
+          margin-top: 10px; }
+        #homePage .dl-liuyan .sortRemark .common_content li .reply_r .show_praise {
+          cursor: pointer;
+          margin-top: 18px;
+          padding-bottom: 15px;
+          text-align: left; }
+
+/*# sourceMappingURL=details.css.map */
