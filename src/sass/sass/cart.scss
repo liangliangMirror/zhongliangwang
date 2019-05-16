@@ -190,6 +190,8 @@
     }
 
     .loadshowcart1 {
+        min-height: 260px;
+
         .ordercont_content_cw {
             width: 1000px;
             margin-top: 10px;
@@ -420,6 +422,10 @@
                     border-radius: 5px;
                     text-decoration: none;
                     cursor: pointer;
+                }
+
+                .cur_ccc {
+                    background: #ccc;
                 }
             }
         }

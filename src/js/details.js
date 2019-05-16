@@ -27,7 +27,7 @@ $(function () {
         $('.common_t_l .pingjia').html(str[0].evaluate);
         $('.spec-scroll').html($html);
         $('.p-title').html(str[0].title);
-        $('.dl_price').html(str[0].price);
+        $('.dl_price1').html(str[0].price);
         $('#buyBtn').attr({ 'data-gid': str[0].gid, 'title': str[0].cid });
         $('.spec-scroll img').on('mouseover', function () {
             $('.jqzoom img').attr('src', $(this).attr('src'));
@@ -43,9 +43,6 @@ $(function () {
     $('#cityChoice').on('click', function () {
         $('.ssss').css('background-position', '-62px -68px');
     })
-    $('#buyBtn').on('click', function () {
-        $('.loadBuy .pro_pop').addClass('displayblock');
-    });
     $('.pop_btn_r,.buy_pop_close').on('click', function () {
         $('.loadBuy .pro_pop').removeClass('displayblock');
     })
@@ -66,6 +63,7 @@ $(function () {
         $val--;
         $(this).next().val($val);
     })
+    chuan();
     var $p2 = new Promise(function (res) {
         $.ajax({
             type: 'get',
@@ -185,7 +183,7 @@ $(function () {
                     }
                 })
             }
-            if ($(this).index() == 5) {
+            if ($(this).index() == 4) {
                 $.ajax({
                     type: 'get',
                     url: "http://localhost:8080/erjieduanxiangmu/src/api/haoping.php",
@@ -291,6 +289,25 @@ $(function () {
                 url: 'http://localhost:8080/erjieduanxiangmu/src/api/dianzan.php',
             })
             $(this).children().children().eq(1).html($val);
+        })
+    }
+    function chuan() {
+        //NOTE 传数据到购物车表；
+        $('.buyBtn').on('click', function () {
+            var $uid = getCookie('uid');
+            $('.loadBuy .pro_pop').addClass('displayblock');
+            var $gid = $(this).attr('data-gid');
+            var $num2 = $('#amount').val();
+            $.ajax({
+                type: 'get',
+                url: 'http://localhost:8080/erjieduanxiangmu/src/api/cart.php',
+                data: { 'uid': $uid, 'gid': $gid, 'num2': $num2, 'isok2': true },
+                dataType: 'json',
+                success: function (str) {
+                    $('.buy-font1').html(str.num1[0]['SUM(num)']);
+                    $('.hejijiage').html(str.num2[0]['SUM(num*price)']);
+                }
+            })
         })
     }
 })

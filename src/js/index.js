@@ -358,5 +358,14 @@ $(function () {
             }
         })
     })
+    $('input[name="text"]').on('keyup', function () {
+        var reg = /^[1-9]\d/g;
+        // var a = $(this).val().
+        if (reg.test($(this).val())) {
+
+        } else {
+            $(this).val(1);
+        }
+    })
     /** -------------------渲染的详情 */
 })
