@@ -3,7 +3,7 @@ $(function () {
     var $obj = {};
     $('.cont_phone').on('blur', function () {
         //验证邮箱和电话
-        var $val = $(this).val();
+        var $val = $(this).val().trim('');
         $.ajax({
             type: 'get',
             url: '../api/enter_uid.php',
@@ -34,7 +34,7 @@ $(function () {
     });
     $('.cont_userName').on('blur', function () {
         //验证用户名
-        var $val = $(this).val();
+        var $val = $(this).val().trim('');
         if (validator.accounts($val)) {
 
             var $p = new Promise(function (res) {
@@ -64,7 +64,7 @@ $(function () {
         }
     })
     $('.cont_pas').on('blur', function () {
-        var $val = $(this).val();
+        var $val = $(this).val().trim('');
         if (validator.passWeak($val)) {
             if (validator.passMedium($val)) {
                 $('.cont_pas_none').hide();
