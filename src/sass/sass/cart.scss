@@ -1,3 +1,10 @@
+*,
+:after,
+:before {
+    box-sizing: content-box;
+    -webkit-box-sizing: inherit;
+}
+
 #homePage,
 .w2 {
     width: 1000px;

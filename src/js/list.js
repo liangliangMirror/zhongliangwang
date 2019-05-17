@@ -36,7 +36,7 @@ $(function () {
                             <a href="###"">
                                 <img class="lazyload"
                                     src="${item.img1}"
-                                    alt="zespri佳沛 新西兰阳光金奇异果6粒盒装  540g">
+                                    alt="">
                                 <div class="label_icon">
                                     <span class="new_icon_bg png">抢购</span>
                                 </div>
@@ -46,7 +46,7 @@ $(function () {
                         <div class="season_icon2">当季时令</div>
                         <div class="clear"></div>
                         <div class="list-title">
-                            <p title="zespri佳沛 新西兰阳光金奇异果6粒盒装  540g">
+                            <p title="">
                                 <a >
                                     ${item.title}
                                 </a>
@@ -71,6 +71,7 @@ $(function () {
                 </li>`
                 }).join('');
                 $('.list_cont').html($html);
+                fanye(num);
                 $('.list_cont li').hover(function () {
                     $(this).toggleClass('on');
                 }, function () {
@@ -85,8 +86,9 @@ $(function () {
     }
     int($num);
     //翻页插件
-    $(window).load(function () {
+    function fanye(one) {
         $('.list_btn').paging({
+            pageNo: one,
             totalPage: Math.ceil($t2 / 10),
             totalSize: $t2,
             callback: function (num) {
@@ -94,7 +96,9 @@ $(function () {
             }
         })
         $('.result-sum .ti').html($t2);
-    })
+    }
+
+
     $('.sort-1 a').on('click', function () {
         if ($(this).hasClass('jiage')) {
             $type = 'price';

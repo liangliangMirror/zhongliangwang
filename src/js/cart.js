@@ -57,7 +57,7 @@ $(function () {
                         <div class="cont5 fl">
                             ￥ <span>${ (item1.price * item1.num).toFixed(2)}</span>
                         </div>
-                        <div class="cont6 fl">
+                        <div class="cont6 fl am-icon-close">
                             删除
                         </div>
                     </div>`;
@@ -65,7 +65,6 @@ $(function () {
                     })
                     $html += `</div>
                 </div>`;
-
                 });
                 $('.order_nav em,#j-totaldeliveryrule1,.oar-money-total span').html($zongjia.toFixed(2));
                 $('.oar_weight span').html($zongzhong.toFixed(2));
@@ -100,6 +99,35 @@ $(function () {
                     jkq();
                     console.log()
                 })
+                $(function () {
+                    $('#doc-modal-list').find('.am-icon-close').add('#doc-confirm-toggle').
+                        on('click', function () {
+                            $('#my-confirm').modal({
+                                relatedTarget: this,
+                                onConfirm: function (options) {
+                                    var $link = $(this.relatedTarget).parents('.content_type_zp');
+                                    var $link2 = $(this.relatedTarget).parents('.ordercont_content_cw');
+                                    if ($link2.find('.cont6').size() == 1) {
+                                        $link2.remove();
+                                    }
+                                    $link.remove();
+                                    var isok = true;
+                                    var gid = $link.attr('data-gid')
+                                    $.ajax({
+                                        type: 'get',
+                                        url: 'http://localhost:8080/erjieduanxiangmu/src/api/cart.php',
+                                        data: { 'isok3': isok, 'uid': $uid, 'gid': gid },
+                                    })
+                                    xiaoji($link);
+                                    jkq();
+                                },
+                                // closeOnConfirm: false,
+                                onCancel: function () {
+
+                                }
+                            });
+                        });
+                });
             }
         })
     } else {
@@ -129,17 +157,7 @@ $(function () {
             jkq();
         })
         $('.cont6').on('click', function () {
-            if ($(this).parents('.ordercont_content_cw').find('.cont6').size() == 1) {
-                $(this).parents('.ordercont_content_cw').remove();
-            }
-            $(this).parents('.content_type_zp').remove();
-            var isok = true;
-            var gid = $(this).parents('.content_type_zp').attr('data-gid')
-            $.ajax({
-                type: 'get',
-                url: 'http://localhost:8080/erjieduanxiangmu/src/api/cart.php',
-                data: { 'isok3': isok, 'uid': $uid, 'gid': gid },
-            })
+
         })
     }
     function xiaoji(item) {
@@ -179,7 +197,7 @@ $(function () {
     function jkq() {
         var val3 = $('input[name="check"]:checked').size();
         var val4 = $('input[name="check"]').size();
-        if (val3 == val4) {
+        if (val3 == val4 && val3 != 0) {
             $('input[name="quan"]').prop('checked', true);
 
         } else {
@@ -198,5 +216,6 @@ $(function () {
         });
         $('.order_nav em,#j-totaldeliveryrule1,.oar-money-total span').html($num.toFixed(2));
         $('.num em,.jian').html($num1);
+        console.log($num)
     }
 })

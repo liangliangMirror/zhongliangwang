@@ -253,25 +253,32 @@ $(function () {
         })
         $p.then(function (res) {
             var $html = res.map(function (item) {
-                return `<li>
-                                    <a href="" class="imgChange">
+                return `<li data-gid="${item.gid}">
+                                    <a href="###" class="imgChange">
                                         <img src="${item.img1}" alt="">
                                     </a>
                                     <div class="inforBox">
-                                        <p class="txtBt"><a href="">${item.title}</a></p>
-                                        <p class="txtInfor"><a href="">${item.variety}</a></p>
+                                        <p class="txtBt"><a href="###">${item.title}</a></p>
+                                        <p class="txtInfor"><a href="###">${item.variety}</a></p>
                                         <p class="buy-btn">
                                             <span>
                                                 ￥<span>${item.price}</span>
                                             </span>
-                                            <a href="">
+                                            <a href="###">
                                                 去看看
                                             </a>
                                         </p>
                                     </div>
                                 </li>`
             }).join('');
-            $('.verticabox .qkk').html($html);
+            $('.verticabox .qkk').html($html).on('click', 'li', function () {
+                var val = $(this).attr('data-gid');
+                window.location.href = 'html/details.html?' + val;
+            });
+            $('.floor1,.floor2').on('click', 'li', function () {
+                var val = $(this).attr('data-gid');
+                window.location.href = 'html/details.html?' + val;
+            })
             $('.verticabox img').hover(function () {
                 $(this).toggleClass('img2');
             }, function () {
@@ -365,6 +372,18 @@ $(function () {
 
         } else {
             $(this).val(1);
+        }
+    })
+    $('.wm-toolbar-top').on('click', function () {
+        window.location.href = 'html/cart.html'
+    })
+    $.ajax({
+        type: 'get',
+        url: 'http://localhost:8080/erjieduanxiangmu/src/api/cart.php',
+        data: { 'uid': getCookie('uid'), },
+        dataType: 'json',
+        success: function (str) {
+            $('.wm-toolbar-top span,.smallcart_totalamount').html(str.num1[0]['SUM(num)']);
         }
     })
     /** -------------------渲染的详情 */

@@ -37,17 +37,17 @@
             $sql7 = "INSERT INTO cart(cid,uid,title,img,num,price,gid,wuight) VALUES('$cid','$uid','$title','$img',$num2,$price,$gid,$zhong)";
             $res7 = $conn->query($sql7);
         }
-        $sql8 = "SELECT SUM(num) FROM cart WHERE uid='$uid'";
-        $res8 = $conn->query($sql8);
-        $contnum1 = $res8->fetch_all(MYSQLI_ASSOC);
-        $sql9 ="SELECT SUM(num*price) FROM cart WHERE uid='$uid'";
-        $res9 = $conn->query($sql9);
-        $contnum2 = $res9->fetch_all(MYSQLI_ASSOC);
     }
     if($num){
         $sql3 = "UPDATE cart SET num=$num WHERE gid=$gid AND uid='$uid'";
         $res3 = $conn->query($sql3);
     }
+     $sql8 = "SELECT SUM(num) FROM cart WHERE uid='$uid'";
+    $res8 = $conn->query($sql8);
+    $contnum1 = $res8->fetch_all(MYSQLI_ASSOC);
+    $sql9 ="SELECT SUM(num*price) FROM cart WHERE uid='$uid'";
+    $res9 = $conn->query($sql9);
+    $contnum2 = $res9->fetch_all(MYSQLI_ASSOC);
     $sql = "SELECT  DISTINCT cid FROM cart WHERE uid='$uid'";
     $sql2 = "SELECT * FROM `cart` WHERE uid='$uid'";
     $res = $conn->query($sql);

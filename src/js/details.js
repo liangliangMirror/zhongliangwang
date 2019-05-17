@@ -210,6 +210,7 @@ $(function () {
             var $cookie = getCookie("uid");//uid
             var $val1 = $(this).parents('.liuyan').find('#biaoqian').val();//标题内容
             var $val2 = $(this).parents('.liuyan').find('.ly_content').val();//内容
+
             var $item = $('input:radio[name="haoping"]:checked').val();
             var $type = null;
             if ($item == '1') {
@@ -306,6 +307,7 @@ $(function () {
                 success: function (str) {
                     $('.buy-font1').html(str.num1[0]['SUM(num)']);
                     $('.hejijiage').html(str.num2[0]['SUM(num*price)']);
+                    $('.wm-toolbar-top span').html(str.num1[0]['SUM(num)']);
                 }
             })
         })
