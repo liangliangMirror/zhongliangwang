@@ -20,7 +20,7 @@ $(function () {
     function int(num) {
         $.ajax({
             type: 'get',
-            url: 'http://localhost:8080/erjieduanxiangmu/src/api/list_xuanran.php',
+            url: '../api/list_xuanran.php',
             data: {
                 'num': num,
                 'type': $type,

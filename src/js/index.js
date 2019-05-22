@@ -37,7 +37,7 @@ $(function () {
     if (getCookie("uid")) {
         var $html = '';
         $html = `<li class="welcome">${getCookie("uid")}，欢迎回来</li>
-                    <li class="t_item"><a href="http://localhost:8080/erjieduanxiangmu/src/indexaaa.html" class="removeCk">退出</a></li>`;
+                    <li class="t_item"><a href="./indexaaa.html" class="removeCk">退出</a></li>`;
         $('#top_login_span').html($html);
         var $html2 = '';
         $html2 = ` <p class="login">
@@ -59,13 +59,13 @@ $(function () {
     } else {
         var $html = '';
         $html = `<li class="welcome">hi，欢迎来我买网</li>
-                    <li class="t_item"><a href="http://localhost:8080/erjieduanxiangmu/src/html/enter.html">登录</a></li>
-                    <li class="t_item"><a href="http://localhost:8080/erjieduanxiangmu/src/html/register.html">注册</a></li>`;
+                    <li class="t_item"><a href="./html/enter.html">登录</a></li>
+                    <li class="t_item"><a href="./html/register.html">注册</a></li>`;
         $('#top_login_span').html($html);
         var $html2 = '';
         $html2 = ` <p class="login">
                                 <span>您还没有登录！</span>
-                                <a href="http://localhost:8080/erjieduanxiangmu/src/html/enter.html">登录</a>
+                                <a href="./html/enter.html">登录</a>
                             </p>
                             <ul class="item">
                                 <li>待付款订单</li>
@@ -170,7 +170,7 @@ $(function () {
 
         }
         $('.cont a').on('click', function () {
-            window.location.href = 'http://localhost:8080/erjieduanxiangmu/src/html/list.html';
+            window.location.href = './html/list.html';
         })
         $('.nav_cont').html($html3);
         $('.sft_right').html($html4);
@@ -244,7 +244,7 @@ $(function () {
         var $p = new Promise(function (res) {
             $.ajax({
                 type: 'get',
-                url: 'http://localhost:8080/erjieduanxiangmu/src/api/verticabox.php',
+                url: './api/verticabox.php',
                 dataType: 'json',
                 success: function (str) {
                     res(str);
@@ -317,7 +317,7 @@ $(function () {
     })
     $(function () {
         $.ajax({
-            url: 'http://localhost:8080/erjieduanxiangmu/src/api/index_wrap.php',
+            url: './api/index_wrap.php',
             dataType: 'json',
             success: function (str) {
                 var $str1 = str.splice(0, 6);
@@ -379,7 +379,7 @@ $(function () {
     })
     $.ajax({
         type: 'get',
-        url: 'http://localhost:8080/erjieduanxiangmu/src/api/cart.php',
+        url: './api/cart.php',
         data: { 'uid': getCookie('uid'), },
         dataType: 'json',
         success: function (str) {
